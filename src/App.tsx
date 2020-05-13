@@ -9,8 +9,18 @@ const App = () => {
   );
 }
 
-class ToggleClass extends React.Component {
-  state = {};
+
+class ToggleClass extends React.Component <undefined, {isOpen: boolean}> {
+  state = {
+    isOpen: true,
+  };
+
+  //method to flip our state
+  toggle = () => {
+    this.setState(state => ({...state, isOpen: !state.isOpen}))
+      
+  }
+  
   render() {
     return (
       <></>
